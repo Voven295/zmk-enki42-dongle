@@ -14,43 +14,31 @@
 #define RSE 2
 #define ADJ 3
 
-&lt { quick_tap_ms = <220>; };
 
-&mt { quick_tap_ms = <220>; };
+&mt {
+        tapping-term-ms = <130>;
+        flavor = "hold-preferred";
+        };
+    &lt {
+        tapping-term-ms = <130>;
+        flavor = "hold-preferred";
+        };
+       
+    
+    &caps_word {
+    continue-list = <UNDERSCORE MINUS BACKSPACE>;
+        };
 
 / {
-    macros {
-        numdot: numdot {
-            label = "ZM_numdot";
-            compatible = "zmk,behavior-macro";
+    behaviors {  
+            retcapsword: shift_ret_caps {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SHIFT_CAPS";
             #binding-cells = <0>;
-            wait-ms = <40>;
-            tap-ms = <40>;
-            bindings =
-                <&macro_press>,
-                <&kp LALT>,
-                <&macro_tap>,
-                <&kp KP_N4 &kp KP_N6>,
-                <&macro_release>,
-                <&kp LALT>;
-        };
-
-        grtsgn: grtsgn {
-            label = "ZM_grtsgn";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <40>;
-            tap-ms = <40>;
-            bindings =
-                <&macro_press>,
-                <&kp LALT>,
-                <&macro_tap>,
-                <&kp KP_N6 &kp KP_N2>,
-                <&macro_release>,
-                <&kp LALT>;
+            bindings = <&kp RET>, <&caps_word>;
+            mods = <(MOD_LSFT)>;
         };
     };
-};
 
 / {
     keymap {
