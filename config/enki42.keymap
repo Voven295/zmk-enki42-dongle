@@ -86,7 +86,7 @@
             bindings = <
 &kp LEFT_WIN  &kp TILDE  &kp N7  &kp N8  &kp N9  &kp AT      &kp HASH      &kp LEFT_BRACKET      &kp UNDER      &kp PIPE          &kp RIGHT_BRACKET  &kp PERCENT
 &trans        &kp MINUS  &kp N4  &kp N5  &kp N6  &kp PLUS    &kp EQUAL     &kp LEFT_PARENTHESIS  &kp STAR       &kp AMPERSAND     &kp RPAR           &kp CARET
-&trans        &kp N0     &kp N1  &kp N2  &kp N3  &kp KP_DOT  &kp LG(EXCL)  &kp LEFT_BRACE        &kp LESS_THAN  &kp GREATER_THAN  &kp RIGHT_BRACE    &kp DOLLAR
+&trans        &kp N0     &kp N1  &kp N2  &kp N3  &kp KP_DOT  &kp EXCL  &kp LEFT_BRACE        &kp LESS_THAN  &kp GREATER_THAN  &kp RIGHT_BRACE    &kp DOLLAR
                                  &trans  &trans  &trans      &trans        &trans                &trans
             >;
         };
